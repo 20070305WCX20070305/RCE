@@ -6,8 +6,8 @@ function [p_lev p_center] = PressureGrid(ps, ptop, N, strech)
     % strech 几何因子，因为向下气压增大，大概是指数形式
     % ==============================================
     % 输出：
-    % p_lev 层边界气压，N+1 *1
-    % p_center 层中心气压 N*1
+    % p_lev 层边界气压，1*N+1
+    % p_center 层中心气压 1*N
     if strech == 1
         p_lev = linspace(ptop, ps, N+1);
     else

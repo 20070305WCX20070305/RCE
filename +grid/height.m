@@ -1,13 +1,13 @@
-function Grid_hight = hight(p_lev, T_lev, Rs, g)
+function Grid_hight = height(p_lev, T_lev, Rs, g)
     %input：
-    %level pressure:p_lev N*1 
-    % level temperature: T_lev N*1 
+    %level pressure:p_lev 1*N
+    % level temperature: T_lev 1*N
     % Rs:普适气体常数，叠加相对分子质量修正 
     % g重力加速度
     
     % output: 
-    % hight: n-level center's hight N*1
-    
+    % hight: n-level center's hight 1*N
+
     p_log = log(p_lev);
     p1 = p_log(1:end - 1);
     p2 = p_log(2:end);

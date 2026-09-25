@@ -1,14 +1,14 @@
 function [r, rs, vmr] = mixRatio(p, es, RH, epsilon)
     % input 
-    % pressure--p--N*1 
-    % vappor pressure--es--N*1 
-    % relative humidity--RH--scalar or N*1 
+    % pressure--p--1*N
+    % vappor pressure--es--1*N
+    % relative humidity--RH--scalar or 1*N
     % mass Ratio--epsilon--scalar
 
     % output
-    % Saturation Vapor Pressure--rs--N*1
-    % vapor pressure--r--N*1
-    % volume mixing ratio--vmr--N*1
+    % Saturation Vapor Pressure--rs--1*N
+    % vapor pressure--r--1*N
+    % volume mixing ratio--vmr--1*N
 
     rs = epsilon * es ./ (p - es);
     r = RH .* (epsilon * es) ./ (p - RH .* es);
